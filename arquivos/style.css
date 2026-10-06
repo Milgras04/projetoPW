@@ -1,0 +1,215 @@
+@charset "UTF-8";
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #17191d;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-bottom: 100px;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: #111316;
+    padding: 20px 20px 0;
+}
+
+.cabecalho h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav button {
+    background: none;
+    border: none;
+    padding: 15px 10px;
+}
+
+nav a {
+    color: #777;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav .ativo a {
+    color: #70c7a5;
+}
+
+nav .ativo {
+    border-bottom: 4px solid #70c7a5;
+}
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+main {
+    padding: 30px 20px;
+}
+
+main h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   LISTAS / CARDS
+========================= */
+
+.listas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.card {
+    background-color: #0a0a0a;
+    border-radius: 15px;
+    padding: 12px;
+    overflow: hidden;
+    
+}
+
+.livros {
+    display: flex;
+    gap: 7px;
+    height: 125px;
+    margin-bottom: 12px;
+}
+
+.livros img {
+    width: 50%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-size: 15px;
+    color: #fff;
+    text-align: left;
+    transition: transform 0.3s;
+    margin-bottom: 7px;
+}
+
+
+.card p {
+    color: #999;
+    font-size: 13px;
+}
+
+
+/* =========================
+   MENU INFERIOR
+========================= */
+
+.menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    height: 80px;
+
+    background-color: #292f35;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border-top: 1px solid #333;
+}
+
+.menu button {
+    background: none;
+    border: none;
+    color: #888;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 11px;
+}
+
+.menu i {
+    font-size: 22px;
+}
+
+.menu button:first-child {
+    color: #31d27c;
+}
+
+
+/* =========================
+   BOTÃO ADICIONAR
+========================= */
+
+.menu button:nth-child(3) i {
+    font-size: 28px;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 500px) {
+
+    main {
+        padding: 25px 15px;
+    }
+
+    .listas {
+        gap: 10px;
+    }
+
+    .card {
+        padding: 9px;
+    }
+
+    .livros {
+        height: 110px;
+    }
+
+    .livros img {
+        height: 110px;
+    }
+
+    .card h3 {
+        font-size: 13px;
+    }
+
+    .card p {
+        font-size: 11px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+}
